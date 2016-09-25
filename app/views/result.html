@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<title>RESULT PAGE YEAH</title>
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+  </head>
+<body>
+
+	<h3>welcome to the results page, ya filty animal</h3>
+	<h3>you have been here {{ counter }} times, omg go home</h3>
+	<form action='/' method='GET'>
+		<input type='submit' value='GO BACK'>
+	</form>
+	<!-- <h3> Welcome {{ name }}!</h3> -->
+	<!-- <h3>You have been to the result page {{ counter }} times!</h3>  -->
+	<!-- <p>Your favorite language is {{ lang }}.</p> -->
+	<!-- <p>Comment: {{ comment }}</p> -->
+
+	{% for survey in surveys: %}
+		<hr>
+		<p> Name: {{ survey['name'] }}</p>
+		<p> Language: {{ survey['language'] }}</p>
+		<p> Comment: {{ survey['comment'] }}</p>
+	{% endfor %}
+
+	<!-- <a href="/">GO BACK</a> THIS ISN'T AS CUTE!-->
+</body>
+</html>
